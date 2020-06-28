@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Employees</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body>
+
+  <div id="main-container">
+
+    <div class="barra-nav">
+      <h2>Manage Employees</h2>
+      <button type="button" id="btn-new-user"><i class="material-icons">&#xE147;</i>Add New Employee</button>
+    </div>
+
+    <div class="filter-div">
+      <form id="filter-form">
+        <input type="text" placeholder="Filter...">
+      </form>
+    </div>
+
+    <div class="list-section">
+
+      <table class="table-body">
+        <thead>
+          <tr class="column-name">
+            <th><input type="checkbox"></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div id="new-user-modal" class="no-show">
+    <div class="new-user-form-header">
+      <p>Add employee</p>
+    </div>
+    <form class="new-user-form">
+      Name<input type="text">
+      Email<input type="email">
+      Address<input type="text">
+      Phone<input type="number">      
+      <button type="button" class="cancel-btn">Cancel</button>
+      <button type="submit" id="add-user-btn">Add</button>
+     </form>`
+  </div>
+
+  <div id="delete-user-modal" class="no-show">
+    <div class="delete-user-header">
+      <p>Delete employee</p>
+    </div>
+    <p>Are you sure you want to delete these records?</p>
+    <p><span>This action cannot be undone.</span></p>
+    <button id="cancel-delete" type="submit">Cancel</button>
+    <button type="button" id="delete-user-btn">Delete</button>
+  </div>
+
+  <div id="edit-user-modal" class="no-show">
+  </div>
+
+  <div id="modal-background" class="no-show"></div>
+
+  <script src="crud.js"></script>
+</body>
+
+</html>

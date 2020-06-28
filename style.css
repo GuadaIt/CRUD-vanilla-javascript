@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box;
+ }
+ 
+ body {
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 50px 20px;
+ }
+ 
+ #main-container {
+  width: 75%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+ }
+ 
+ .barra-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #2d5986;
+  color: #fff;
+ }
+ 
+ .barra-nav h2 {
+  font-weight: lighter;
+  margin: 0;
+ }
+ 
+ .barra-nav button {
+  color: #fff;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(103, 170, 36);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+ }
+ 
+ .barra-nav button:hover {
+  background-color: rgb(67, 117, 17);;
+ }
+ 
+ .barra-nav button .material-icons {
+  margin-right: 5px;
+ }
+ 
+ .filter-div {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  padding: 15px;
+ }
+ 
+ .filter-div form {
+  width: 40%;
+ }
+ 
+ .filter-div form input {
+  height: 40px;
+  width: 100%;
+  font-size: 15px;
+  padding-left: 8px;
+  border: 1px solid #c6d9eb;
+  border-radius: 4%;
+ }
+ 
+ .list-section {
+  padding: 20px;
+  color: #2d5986;
+ }
+ 
+ .table-body {
+  width: 100%;
+  border-collapse: collapse;
+ }
+ 
+ .column-name {
+  text-align: left;
+  border-bottom: 2px solid #c6d9eb;
+  font-size: 15;
+ }
+ 
+ .user-info {
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+ }
+ 
+ th {
+  padding: 15px;
+ }
+ 
+ .user-info:hover {
+  background-color: #ecf2f8;
+ }
+ 
+ .edit {
+  color: #ffff33;
+  cursor: pointer;
+ }
+ 
+ .delete {
+  color: #ff3333;
+  cursor: pointer;
+ }
+ 
+ /*-------------------- NO-SHOW MODALS ---------------------*/
+ .no-show {
+  display: none;
+ }
+ 
+ /*-------------------- NEW USER FORM ---------------------*/
+ #new-user-modal {
+  z-index: 3;
+  position: fixed;
+  background-color: #fff;
+  width: 400px;
+  height: 500px;
+  box-shadow: 1px 6px 16px 3px rgba(0,0,0,0.56);
+  border-radius: 5px; 
+  padding: 20px;
+  color: #2d5986;
+ }
+ 
+ .new-user-form-header {
+  padding: 20px;;
+  border-bottom: 2px solid #c6d9eb;
+  width: 90%;
+ }
+ 
+ .new-user-form-header p {
+  margin: 0;
+  font-size: 30px;
+ }
+ 
+ .new-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  padding: 20px;
+ }
+ 
+ .new-user-form input {
+  padding-left: 8px;
+  height: 30px;
+  width: 85%;
+  font-size: 15px;
+  border: 1px solid #c6d9eb;
+  border-radius: 5px;
+  margin: 10px 0;
+ }
+ 
+ .new-user-form button {
+  position: relative;
+  height: 30px;
+  width: 100px;
+  color: #2d5986;
+  border: 0.5 solid #c6d9eb;
+  cursor: pointer;
+ }
+ 
+ .cancel-btn {
+  left: 100px;
+  top: 40px;
+  transition: all 0.2s ease-out; 
+ }
+ 
+ .cancel-btn:hover {
+  background-color: #c3d6e9;
+ }
+ 
+ #add-user-btn {
+  border: none;
+  color: #fff;
+  left: 220px;
+  top: 10px;
+  background-color: rgb(103, 170, 36);
+  transition: all 0.2s ease-out;
+ }
+ 
+ #add-user-btn:hover {
+  background-color: rgb(67, 117, 17);
+ }
+ 
+ /*-------------------- DELETE USER MODAL ---------------------*/
+ #delete-user-modal {
+  z-index: 3;
+  position: fixed;
+  background-color: #fff;
+  width: 400px;
+  height: 250px;
+  box-shadow: 1px 6px 16px 3px rgba(0,0,0,0.56);
+  border-radius: 5px; 
+  padding: 20px;
+  color: #2d5986;
+ }
+ 
+ .delete-user-header {
+  padding: 20px;;
+  border-bottom: 2px solid #c6d9eb;
+  width: 90%;
+ }
+ 
+ .delete-user-header p {
+  margin: 0;
+  font-size: 20px;
+ }
+ 
+ p {
+  margin-left: 15px;
+  font-size: 15px;
+  font-weight: lighter;
+ }
+ 
+ span {
+  font-size: 12px;
+  color: black;
+ }
+ 
+ #delete-user-modal button {
+  position: relative;
+  height: 30px;
+  width: 100px;
+  border: 0.5 solid #c6d9eb;
+  cursor: pointer;
+ }
+ 
+ #delete-user-modal button[type="submit"] {
+  color: #2d5986;
+  left: 150px;
+  top: 30px;
+  transition: all 0.2s ease-out; 
+ }
+ 
+ #delete-user-modal button[type="submit"]:hover {
+  background-color: #c3d6e9;
+ }
+ 
+ #delete-user-btn {
+  border: none;
+  color: #fff;
+  left: 155px;
+  top: 30px;
+  background-color: #e60000;
+  transition: all 0.2s ease-out;
+ }
+ 
+ #delete-user-btn:hover {
+  background-color: #b30000;
+ }
+ /*-------------------- EDIT USER MODAL---------------------*/
+ #edit-user-modal {
+  z-index: 3;
+  position: fixed;
+  background-color: #fff;
+  width: 400px;
+  height: 500px;
+  box-shadow: 1px 6px 16px 3px rgba(0,0,0,0.56);
+  border-radius: 5px; 
+  padding: 20px;
+  color: #2d5986;
+ }
+ 
+ .edit-user-form-header {
+  padding: 20px;;
+  border-bottom: 2px solid #c6d9eb;
+  width: 90%;
+ }
+ 
+ .edit-user-form-header p {
+  margin: 0;
+  font-size: 30px;
+ }
+ 
+ .edit-user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  padding: 20px;
+ }
+ 
+ .edit-user-form input {
+  height: 30px;
+  width: 85%;
+  font-size: 15px;
+  border: 1px solid #c6d9eb;
+  border-radius: 5px;
+  margin: 10px 0;
+ }
+ 
+ .edit-user-form button {
+  position: relative;
+  height: 30px;
+  width: 100px;
+  color: #2d5986;
+  border: 0.5 solid #c6d9eb;
+  cursor: pointer;
+ }
+ 
+ #cancel-edit-user {
+  left: 100px;
+  top: 40px;
+  transition: all 0.2s ease-out; 
+ }
+ 
+ #cancel-.edit-user:hover {
+  background-color: #c3d6e9;
+ }
+ 
+ #add-edited-user-btn {
+  border: none;
+  color: #fff;
+  left: 220px;
+  top: 10px;
+  background-color: #3e70a3;
+  transition: all 0.2s ease-out;
+ }
+ 
+ #add-edited-user-btn:hover {
+  background-color: #2e557c;
+ }
+ 
+ /*-------------------- MODAL BACKGROUND ---------------------*/
+ #modal-background {
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+ }
